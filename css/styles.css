@@ -39,6 +39,10 @@ img{
   vertical-align:bottom;
 }
 
+ul{
+  list-style: none;
+}
+
 .btn{
   display: block;
   width: 120px;
@@ -65,6 +69,7 @@ img{
 header img{
   display: block;
   margin: 0 auto;
+  padding: 16px 0;
 }
 header img:hover{
   opacity: .8;
@@ -86,8 +91,12 @@ nav ul{
   align-items: center;
 }
 
+nav ul li{
+  transition:opacity .3s;
+}
+
 nav ul li:hover{
-  opacity: .8;
+  opacity: .5;
 }
 
 nav ul li + li{
@@ -156,16 +165,18 @@ nav ul li + li{
 }
 
 .skill ul{
-  font-size: 14px;;
+  list-style-type: disc;
+  font-size: 14px;
 }
 
 .skill a{
   color:#0000EE;
   text-decoration:underline;
+  transition:opacity .3s;
 }
 
 .skill a:hover{
-  opacity: .6;
+  opacity: .5;
 }
 
 .skill section + section{
@@ -184,17 +195,8 @@ nav ul li + li{
 }
 
 .works p{
-  padding-bottom: 8px;
+  padding-bottom: 16px;
   text-align: center;
-}
-
-.works img{
-  display: block;
-  margin: 8px auto;
-}
-
-.works img:hover{
-  opacity: .8;
 }
 
 .works section{
@@ -205,6 +207,16 @@ nav ul li + li{
 
 .works section + section{
   margin-top: 16px;
+}
+
+.works img{
+  display: block;
+  margin: 8px auto;
+  transition:opacity .3s;
+}
+
+.works img:hover{
+  opacity: .8;
 }
 
 /* banner */
@@ -226,21 +238,47 @@ nav ul li + li{
 .last a{
   color:#0000EE;
   text-decoration:underline;
+  transition:opacity .3s;
 }
 
 .last a:hover{
   opacity: .6;
 }
 
-.copyright{
+footer{
   background: #5E7F91;
   color: aliceblue;
   padding: 32px 0;
-  text-align: center;
 }
 
-.copyright small{
+footer .container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer small{
   font-size: 14px;
+}
+
+footer a{
+  transition:opacity .3s;
+}
+
+footer a:hover{
+  opacity: .6;
+}
+
+footer li i{
+  font-size: 24px;
+}
+
+footer ul{
+  display: flex;
+}
+
+footer li + li{
+  margin-left: 8px;
 }
 
 /* large screen */
@@ -280,16 +318,15 @@ nav ul li + li{
     justify-content: center;
     gap:16px;
   }
-
-  .works section + section{
-    margin-top: 0;
-  }
-
+  
   .works section{
-    width: calc((100% - 32px) 3);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+  }
+  
+  .works section + section{
+    margin-top: 0;
   }
 
 }
