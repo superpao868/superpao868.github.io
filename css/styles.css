@@ -52,6 +52,7 @@ ul{
   padding: 8px 0;
   border-radius:4px;
   cursor: pointer;
+  transition:opacity .3s;
 }
 
 .btn:hover{
@@ -70,6 +71,7 @@ header img{
   display: block;
   margin: 0 auto;
   padding: 16px 0;
+  transition:opacity .3s;
 }
 header img:hover{
   opacity: .8;
