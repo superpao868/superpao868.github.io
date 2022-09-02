@@ -1,5 +1,6 @@
 /* common */
-body{
+
+body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -7,148 +8,204 @@ body{
 h1,
 h2,
 h3,
-p{
+p {
   margin: 0;
   font-weight: normal;
 }
 
-h1{
+h1 {
   font-size: 24px;
 }
 
-h2{
+h2 {
   font-size: 20px;
 }
 
-h3{
+h3 {
   font-size: 16px;
 }
 
-p{
+p {
   font-size: 14px;
   line-height: 1.6;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
   font-size: 14px;
 }
 
-img{
-  vertical-align:bottom;
+img {
+  vertical-align: bottom;
 }
 
-ul{
+ul {
   list-style: none;
 }
 
-.btn{
+.btn {
   display: block;
   width: 120px;
   background: #5E7F91;
   color: #f0f8ff;
   text-align: center;
   padding: 8px 0;
-  border-radius:4px;
+  border-radius: 4px;
   cursor: pointer;
-  transition:opacity .3s;
+  transition: opacity .3s;
 }
 
-.btn:hover{
+.btn:hover {
   opacity: .8;
 }
 
-.container{
+.container {
   width: calc(100% - 32px);
   margin: 0 auto;
-  /* outline:2px solid red; */
-  max-width:800px;
+  /* outline: 2px solid red; */
+  max-width: 800px;
+}
+
+/* animation */
+
+.animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity .5s, transform .5s;
+}
+
+.animate.slide-from-left {
+  transform: translateX(-40px);
+}
+
+.animate.slide-from-right {
+  transform: translateX(40px);
+}
+
+.animate.appear {
+  opacity: 1;
+  transform: none;
+}
+
+#to_top {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+#to_top.scrolled {
+  opacity: 1;
+}
+
+#to_top i {
+  font-size: 32px;
+  color: #22577a;
 }
 
 /* header */
-header img{
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: background-color .3s, box-shadow .3s;
+  z-index: 1;
+}
+
+header.scrolled {
+  background-color: rgba(255, 255, 255, .95);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .3);
+}
+
+header img {
   display: block;
   margin: 0 auto;
   padding: 32px 0;
-  transition:opacity .3s;
+  transition: opacity .3s;
 }
-header img:hover{
+
+header img:hover {
   opacity: .8;
 }
 
 /* nav */
-nav{
+
+nav {
   background: #5E7F91;
   color: aliceblue;
 }
 
-nav ul{
+nav ul {
   height: 40px;
   margin: 0;
   padding: 0;
   list-style: none;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
 }
 
-nav ul li{
-  transition:opacity .3s;
+nav ul li {
+  transition: opacity .3s;
 }
 
-nav ul li:hover{
+nav ul li:hover {
   opacity: .5;
 }
 
-nav ul li + li{
+nav ul li + li {
   margin-left: 24px;
 }
 
 /* profile */
-.profile{
-  padding: 48px 0;
+
+.profile {
+  padding: 216px 0 0;
 }
 
-.profile h1{
+.profile h1 {
   padding-bottom: 16px;
   text-align: center;
 }
 
-.profile .pic{
+.profile .pic {
   padding: 32px;
 }
 
 .profile h2,
-.profile h3{
+.profile h3 {
   text-align: center;
 }
 
-.profile h3{
+.profile h3 {
   padding-bottom: 8px;
 }
 
-.profile img{
-  display:block;
+.profile img {
+  display: block;
   margin: 0 auto;
   border-radius: 50%;
 }
 
-.profile a{
+.profile a {
   margin: 16px auto;
 }
 
-.profile .desc{
+.profile .desc {
   padding: 32px;
 }
 
 /* skill */
-.skill{
+.skill {
   background: #f0f8ff;
   padding: 48px 0;
+  overflow: hidden;
 }
 
-.skill section{
+.skill section {
   background: #fff;
   margin-top: 38px;
   padding: 16px;
@@ -156,179 +213,193 @@ nav ul li + li{
 }
 
 .skill h1,
-.skill h2{
+.skill h2 {
   padding-bottom: 16px;
   text-align: center;
 }
 
-.skill .pic{
+.skill .pic {
   padding: 32px;
   text-align: center;
 }
 
-.skill ul{
+.skill ul {
   list-style-type: disc;
   font-size: 14px;
 }
 
-.skill a{
-  color:#0000EE;
-  text-decoration:underline;
-  transition:opacity .3s;
+.skill a {
+  color: #0000EE;
+  text-decoration: underline;
+  transition: opacity .3s;
 }
 
-.skill a:hover{
+.skill a:hover {
   opacity: .5;
 }
 
-.skill section + section{
+.skill section + section {
   margin-top: 40px;
 }
 
 /* works */
-.works{
+
+.works {
   padding: 48px 0;
 }
 
 .works h1,
-.works h3{
+.works h3 {
   padding-bottom: 8px;
   text-align: center;
 }
 
-.works p{
+.works p {
   padding-bottom: 16px;
   text-align: center;
 }
 
-.works section{
+.works section {
   background: #f0f8ff;
   padding: 16px;
   border-radius: 16px;
 }
 
-.works section + section{
+.works section + section {
   margin-top: 16px;
 }
 
-.works img{
+.works img {
   display: block;
   margin: 8px auto;
-  transition:opacity .3s;
+  transition: opacity .3s;
 }
 
-.works img:hover{
+.works img:hover {
   opacity: .8;
 }
 
 /* banner */
-.banner p{
+
+.banner p {
   margin-top: 32px;
 }
 
 /* last */
-.last{
+
+.last {
   background: #f0f8ff;
   padding: 48px 0;
   text-align: center;
 }
 
-.last h1{
+.last h1 {
   padding-bottom: 16px;
 }
 
-.last a{
-  color:#0000EE;
-  text-decoration:underline;
-  transition:opacity .3s;
+.last a {
+  color: #0000EE;
+  text-decoration: underline;
+  transition: opacity .3s;
 }
 
-.last a:hover{
+.last a:hover {
   opacity: .6;
 }
 
-footer{
+footer {
   background: #5E7F91;
   color: aliceblue;
-  padding: 32px 0;
+  padding: 40px 0;
 }
 
-footer .container{
+footer .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-footer small{
+footer small {
   font-size: 14px;
 }
 
-footer a{
-  transition:opacity .3s;
+footer a {
+  transition: opacity .3s;
 }
 
-footer a:hover{
+footer a:hover {
   opacity: .6;
 }
 
-footer li i{
+footer li i {
   font-size: 24px;
 }
 
-footer ul{
+footer ul {
   display: flex;
 }
 
-footer li + li{
+footer li + li {
   margin-left: 8px;
 }
 
 /* large screen */
-@media(min-width:600px){
 
-  .profile .container{
+@media(min-width:600px) {
+
+  .profile .container {
     display: flex;
   }
 
-  .profile .pic{
+  .profile .pic {
     width: 25%;
   }
 
-  .profile .desc{
+  .profile .desc {
     width: 75%;
   }
 
-  .skill section{
+  .skill section {
     display: flex;
   }
 
-  .skill section .pic{
+  .skill section .pic {
     padding: 0 32px;
   }
 
-  .skill h2{
+  .skill h2 {
     text-align: left;
   }
 
-  .skill section:nth-child(odd){
+  .skill section:nth-child(odd) {
     flex-direction: row-reverse;
   }
 
-  .works .container{
+  .works .container {
     display: flex;
-    flex-wrap: wrap;
+    gap: 16px;
     justify-content: center;
-    gap:16px;
+    flex-flow: row wrap;
+    /* align-content: flex-start; */
   }
   
-  .works section{
+  .works section + section {
+    margin-top: 0;
+  }
+
+  .works section {
+    width: calc((100% - 32px) / 4);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
   }
   
-  .works section + section{
-    margin-top: 0;
+  .animate.delay {
+    transition-delay: .3s;
+  }
+
+  .animate.delay-more {
+    transition-delay: .6s;
   }
 
 }

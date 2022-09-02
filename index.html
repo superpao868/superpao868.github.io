@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="jp">
   <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>ポートフォリオ</title>
     <link rel="icon" href="img/favicon.png">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
 
@@ -28,12 +28,14 @@
       <div>
     </header>
 
+    <div id="target"></div>
+
     <section class="profile" id="profile">
       <h1>プロフィール</h1>
       <div class="container">
-        <div class="pic">
+        <div class="pic animate">
           <!-- <h2>菊地 葉月</h2> -->
-          <h3>KIKUCHI HAZUKI</h3>
+          <!-- <h3>KIKUCHI HAZUKI</h3> -->
           <img src="img/kikuchi.png"width="96">
           <a href="img/resume.pdf" class="btn">履歴書PDF</a>
         </div>
@@ -46,12 +48,12 @@
     <section class="skill" id="skill">
       <h1>スキルと資格</h1>
       <div class="container">
-        <section>
+        <section class="animate slide-from-left">
           <div class="pic">
-            <img src="img/webtest.png" alt="ウェブ技能検定3級" width="160">
+            <img src="img/webtest.png" alt="ウェブ技能検定3級" width="240">
           </div>
           <div class="desc">
-            <h2>ウェブ技能検定3級</h2>
+            <h2>ウェブデザイン技能検定3級</h2>
             <p>ウェブサイトの作成、運営についての知識を体系的に学びたいと思い、2022年6月に取得しました。主に下記のことを学びました。</p>
             <ul>
               <li>インターネット概論</li>
@@ -67,27 +69,27 @@
             </ul>
           </div>
         </section>
-        <section>
+        <section class="animate slide-from-right">
           <div class="pic">
-            <img src="img/itpassport.png" alt="ITパスポート" width="160">
+            <img src="img/itpassport.png" alt="ITパスポート" width="240">
           </div>
           <div class="desc">
             <h2>ITパスポート</h2>
             <p>長らくIT業界から離れていたので、再度学び直しました。2022年8月に取得しました。</p>
           </div>
         </section>
-        <section>
+        <section class="animate slide-from-left">
           <div class="pic">
-            <img src="img/boki-level3.png" alt="商業簿記3級" width="160">
+            <img src="img/boki-level3.png" alt="商業簿記3級" width="240">
           </div>
           <div class="desc">
             <h2>商業簿記3級</h2>
             <p>2022年7月に取得しました。ITパスポートの試験範囲にも簿記の内容がありましたし、いつか青色申告を自分でしてみたいと思い、しっかり勉強しました。会計業務でお役に立てるかもしれません。</p>
           </div>
         </section>
-        <section>
+        <section class="animate slide-from-right">
           <div class="pic">
-            <img src="img/dotinstall.png" alt="eラーニングによるプログラミング学習" width="160">
+            <img src="img/dotinstall.png" alt="eラーニングによるプログラミング学習" width="180">
           </div>
           <div class="desc">
             <h2>eラーニングによるプログラミング学習</h2>
@@ -95,9 +97,9 @@
             <a href="https://dotinstall.com/"target="_blank">ドットインストール</a>
           </div>
         </section>
-        <section>
+        <section class="animate slide-from-left">
           <div class="pic">
-            <img src="img/Adobe.png" alt="IllustratorとPhotoshopの学習" width="160">
+            <img src="img/Adobe.png" alt="IllustratorとPhotoshopの学習" width="180">
           </div>
           <div class="desc">
             <h2>IllustratorとPhotoshopの学習</h2>
@@ -106,13 +108,13 @@
             <a href="https://www.adobe.com/jp/events/training/photoshop-workshop.html"target="_blank">Photoshopことはじめオンライン講座</a>
           </div>
         </section>
-        <section>
+        <section class="animate slide-from-right">
           <div class="pic">
-            <img src="img/google.png" alt="Googleワークショップデジタルマーケティング基礎の学習" width="160">
+            <img src="img/GoogleDigitalMarket.png" alt="Googleワークショップデジタルマーケティング基礎の修了証" width="240">
           </div>
           <div class="desc">
-            <h2>Googleワークショップ<br>「デジタルマーケティング基礎」の学習</h2>
-            <p>Googleワークショップを利用し、「デジタルマーケティングの基礎」を受講し、認定証を取得しました。学習内容は主に下記になります。</p>
+            <h2>Googleワークショップ<br>「デジタルマーケティングの基礎」認定</h2>
+            <p>Googleワークショップの「デジタルマーケティングの基礎」を受講し、2022年9月に認定証を取得しました。学習内容は主に下記になります。</p>
             <a href="https://learndigital.withgoogle.com/digitalworkshop-jp/"target="_blank">Googleデジタルワークショップ</a>
             <ul>
               <li>ビジネスをオンラインで展開<br>（ビジネスをどのようにインターネットで活用するか、どの媒体で伝えるか検討する方法）</li>
@@ -132,43 +134,46 @@
       <h1>作品</h1>
       <p>インターネット上に素材がたくさんがありますが、それは一切使わず、<br>写真は全て私のiPhoneで撮ったもの、イラストは全て私が作成したものです。</p>
       <div class="container">
-        <section>
+        <section class="animate">
           <div>
             <h3>バナー</h3>
+            <p>頑張って作りました。頑張って作りました。</p>
             <a href="works/banner.html">
               <img src="img/works/banner/300×300.png" alt="banner" width="120">
             </a>
           </div>
           <p>作成時間：2時間</p>
         </section>
-        <section>
+        <section class="animate delay">
           <div>
             <h3>イラスト</h3>
+            <p>頑張って作りました。頑張って作りました。頑張って作りました。頑張って作りました。頑張って作りました。頑張って作りました。頑張って作りました。頑張って作りました。頑張って作りました。</p>
             <a href="works/illust.html">
               <img src="img/works/scenery.png" alt="scenery" width="120">
             </a>
           </div>
           <p>作成時間：1時間</p>
         </section>
-        <section>
+        <section class="animate delay-more">
           <div>
             <h3>メニュー表</h3>
+            <p>頑張って作りました。頑張って作りました。頑張って作りました。頑張って作りました。頑張って作りました。頑張って作りました。頑張って作りました。頑張って作りました。頑張って作りました。</p>
             <a href="works/menu.html">
               <img src="img/works/menu/menu2.png" alt="menu" width="120">
             </a>
           </div>
           <p>作成時間：1時間</p>
         </section>
-        <section>
+        <section class="animate">
           <div>
             <h3>アニメーション</h3>
             <a href="works/animation_1.html">
               <img src="img/works/animation_1.gif" alt="animation" width="120">
             </a>
           </div>
-          <p>作成時間：3時間</p>
+          <p>作成時間：8時間</p>
         </section>
-        <section>
+        <section class="animate delay">
           <div>
             <h3>アニメーション</h3>
             <a href="works/animation_2.html">
@@ -177,7 +182,7 @@
           </div>
           <p>作成時間：8時間</p>
         </section>
-        <section>
+        <section class="animate delay-more">
           <div>
             <h3>ショップカード</h3>
             <a href="works/shopcard.html">
@@ -207,5 +212,10 @@
     </div>
   </footer>
 
+  <a href="#" id="to_top">
+    <i class="bi bi-arrow-up-square-fill"></i>
+  </a>
+
+  <script src="js/main.js"></script>
   </body>
 </html>
