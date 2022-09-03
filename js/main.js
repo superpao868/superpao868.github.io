@@ -1,7 +1,5 @@
 'use strict';
 {
-  //Intersection Observer API
-
   function inViewCallback(entries, obs) {
     entries.forEach(entry => {
       if (!entry.isIntersecting) {
@@ -23,9 +21,9 @@
       }
     });
   }
+
   const header = document.querySelector('header');
   const toTop = document.getElementById('to_top');
-
   const inViewObserver = new IntersectionObserver(inViewCallback, {
     threshold: 0.2,
   });

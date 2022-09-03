@@ -108,6 +108,7 @@ ul {
 /* header */
 
 header {
+
   position: fixed;
   top: 0;
   width: 100%;
@@ -116,14 +117,16 @@ header {
 }
 
 header.scrolled {
-  background-color: rgba(255, 255, 255, .95);
+  /* background-color: rgba(255, 255, 255, .55); */
   box-shadow: 0 0 8px rgba(0, 0, 0, .3);
 }
 
 header img {
   display: block;
   margin: 0 auto;
-  padding: 32px 0;
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
   transition: opacity .3s;
 }
 
@@ -131,39 +134,10 @@ header img:hover {
   opacity: .8;
 }
 
-/* nav */
-
-nav {
-  background: #5E7F91;
-  color: aliceblue;
-}
-
-nav ul {
-  height: 40px;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-nav ul li {
-  transition: opacity .3s;
-}
-
-nav ul li:hover {
-  opacity: .5;
-}
-
-nav ul li + li {
-  margin-left: 24px;
-}
-
 /* profile */
 
 .profile {
-  padding: 216px 0 0;
+  padding: 184px 0 0;
 }
 
 .profile h1 {
@@ -262,6 +236,7 @@ nav ul li + li {
 .works section {
   background: #f0f8ff;
   padding: 16px;
+  box-sizing: border-box;
   border-radius: 16px;
 }
 
@@ -281,8 +256,8 @@ nav ul li + li {
 
 /* banner */
 
-.banner p {
-  margin-top: 32px;
+.banner {
+  margin-top: 184px;
 }
 
 /* last */
@@ -388,7 +363,7 @@ footer li + li {
   }
 
   .works section {
-    width: calc((100% - 32px) / 4);
+    width: calc((100% - 32px) / 3);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
