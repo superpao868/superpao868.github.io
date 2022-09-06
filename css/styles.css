@@ -7,8 +7,7 @@ body {
 
 h1,
 h2,
-h3,
-p {
+h3 {
   margin: 0;
   font-weight: normal;
 }
@@ -26,6 +25,7 @@ h3 {
 }
 
 p {
+  margin: 0;
   font-size: 14px;
   line-height: 1.6;
 }
@@ -34,6 +34,7 @@ a {
   text-decoration: none;
   color: inherit;
   font-size: 14px;
+  display: block;
 }
 
 img {
@@ -42,6 +43,7 @@ img {
 
 ul {
   list-style: none;
+  font-size: 14px;
 }
 
 .btn {
@@ -108,7 +110,6 @@ ul {
 /* header */
 
 header {
-
   position: fixed;
   top: 0;
   width: 100%;
@@ -117,7 +118,7 @@ header {
 }
 
 header.scrolled {
-  /* background-color: rgba(255, 255, 255, .55); */
+  background-color: rgba(255, 255, 255, .95);
   box-shadow: 0 0 8px rgba(0, 0, 0, .3);
 }
 
@@ -125,8 +126,8 @@ header img {
   display: block;
   margin: 0 auto;
   width: 100%;
-  height: 120px;
-  object-fit: cover;
+  height: 96px;
+  /* object-fit: cover; */
   transition: opacity .3s;
 }
 
@@ -137,30 +138,26 @@ header img:hover {
 /* profile */
 
 .profile {
-  padding: 184px 0 0;
+  padding: 160px 0 24px;
 }
 
-.profile h1 {
-  padding-bottom: 16px;
-  text-align: center;
-}
-
-.profile .pic {
-  padding: 32px;
-}
-
+.profile h1,
 .profile h2,
 .profile h3 {
   text-align: center;
 }
 
+.profile h1 {
+  padding-bottom: 40px;
+}
+
 .profile h3 {
-  padding-bottom: 8px;
+  padding-bottom: 16px;
 }
 
 .profile img {
   display: block;
-  margin: 0 auto;
+  margin: 0 auto 16px;
   border-radius: 50%;
 }
 
@@ -169,43 +166,50 @@ header img:hover {
 }
 
 .profile .desc {
-  padding: 32px;
+  padding: 16px 32px;
 }
 
 /* skill */
 .skill {
   background: #f0f8ff;
-  padding: 48px 0;
+  padding: 40px 0;
   overflow: hidden;
 }
 
 .skill section {
   background: #fff;
-  margin-top: 38px;
-  padding: 16px;
   border-radius: 16px;
 }
 
-.skill h1,
-.skill h2 {
-  padding-bottom: 16px;
+.skill h1 {
+  padding-bottom: 40px;
   text-align: center;
 }
 
 .skill .pic {
-  padding: 32px;
+  padding: 16px 0;
+  text-align: center;
+}
+
+.skill h2,
+.skill p {
+  padding: 0 32px 16px;
+}
+
+.skill h2 {
   text-align: center;
 }
 
 .skill ul {
   list-style-type: disc;
-  font-size: 14px;
+  padding: 0 32px 16px 48px;
 }
 
 .skill a {
   color: #0000EE;
   text-decoration: underline;
   transition: opacity .3s;
+  padding: 0 32px;
 }
 
 .skill a:hover {
@@ -213,24 +217,31 @@ header img:hover {
 }
 
 .skill section + section {
-  margin-top: 40px;
+  margin-top: 16px;
 }
 
 /* works */
 
 .works {
-  padding: 48px 0;
+  padding: 40px 0;
 }
 
 .works h1,
-.works h3 {
-  padding-bottom: 8px;
+.works h3,
+.works p {
   text-align: center;
 }
 
-.works p {
+.works h1 {
+  padding-bottom: 40px;
+}
+
+.works h3 {
   padding-bottom: 16px;
-  text-align: center;
+}
+
+.works p {
+  padding: 0 16px 16px;
 }
 
 .works section {
@@ -257,19 +268,19 @@ header img:hover {
 /* banner */
 
 .banner {
-  margin-top: 184px;
+  margin-top: 160px;
 }
 
 /* last */
 
 .last {
   background: #f0f8ff;
-  padding: 48px 0;
+  padding: 40px 0;
   text-align: center;
 }
 
 .last h1 {
-  padding-bottom: 16px;
+  padding-bottom: 40px;
 }
 
 .last a {
@@ -325,25 +336,36 @@ footer li + li {
   .profile .container {
     display: flex;
   }
-
+  
   .profile .pic {
-    width: 25%;
+    width: 30%;
   }
 
   .profile .desc {
-    width: 75%;
+    width: 70%;
+    padding: 0 32px 0 0 ;
+  }
+
+  .skill .pic {
+    width: 40%;
+  }
+
+  .skill .desc {
+    width: 60%;
   }
 
   .skill section {
     display: flex;
-  }
-
-  .skill section .pic {
-    padding: 0 32px;
+    gap: 16px;
+    padding: 16px;
   }
 
   .skill h2 {
     text-align: left;
+  }
+
+  .skill ul {
+    padding-bottom: 0;
   }
 
   .skill section:nth-child(odd) {
@@ -355,7 +377,6 @@ footer li + li {
     gap: 16px;
     justify-content: center;
     flex-flow: row wrap;
-    /* align-content: flex-start; */
   }
   
   .works section + section {
